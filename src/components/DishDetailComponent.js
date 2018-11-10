@@ -1,33 +1,28 @@
 import React, {Component} from 'react';
-import {Card, CardBody, CardImg, CardImgOverlay, CardText, CardTitle} from "reactstrap";
+import {Card, CardBody, CardImg, CardText, CardTitle} from "reactstrap";
 
 class DishDetail extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
-
-
-        if (this.props.selectedDish != null) {
-            const comments = this.props.selectedDish.comments.map((item) => {
+        if (this.props.dish != null) {
+            const comments = this.props.dish.comments.map((item) => {
                 return (
                     <div key={item.id}>
                         {item.comment}<br/><br/>
-                        --{item.author}, {item.date}<br/><br/>
+                        --{item.author}, {new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(item.date)))}<br/><br/>
                     </div>
                 );
             });
 
             return(
+                <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-5 m-1">
                         <Card>
-                            <CardImg top src={this.props.selectedDish.image} alt={this.props.selectedDish.name}/>
+                            <CardImg top src={this.props.dish.image} alt={this.props.dish.name}/>
                             <CardBody>
-                                <CardTitle>{this.props.selectedDish.name}</CardTitle>
-                                <CardText>{this.props.selectedDish.description}</CardText>
+                                <CardTitle>{this.props.dish.name}</CardTitle>
+                                <CardText>{this.props.dish.description}</CardText>
                             </CardBody>
                         </Card>
                     </div>
@@ -35,6 +30,7 @@ class DishDetail extends Component {
                         <h1>Comments</h1>
                         {comments}
                     </div>
+                </div>
                 </div>
                 );
         } else
