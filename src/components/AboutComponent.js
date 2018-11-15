@@ -31,7 +31,7 @@ function About(props) {
     const leaders = props.leaders.map((leader) => {
         return (
             <div className="row" key={leader.id}>
-                <p>Leader {leader.name}</p>
+                <RenderLeader detail={leader}/>
             </div>
         );
     });
