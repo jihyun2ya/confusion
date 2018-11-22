@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53206719-876b-4011-8cae-55068647cf2c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/ContactComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeaderComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderComponent.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,14 +29,14 @@
         <counts>
           <entry key="css" value="2" />
           <entry key="html" value="1" />
-          <entry key="js" value="30" />
+          <entry key="js" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="30" />
+          <entry key="JavaScript" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -48,24 +48,24 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="2" />
-          <entry key="js" value="9180" />
+          <entry key="js" value="10281" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="JavaScript" value="9180" />
+          <entry key="JavaScript" value="10281" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/FooterComponent.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/HeaderComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            <state relative-caret-position="306">
+              <caret line="107" column="75" lean-forward="true" selection-start-line="107" selection-start-column="75" selection-end-line="107" selection-end-column="75" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -73,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ContactComponent.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="123">
@@ -195,7 +195,6 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/HeaderComponent.js" />
         <option value="$PROJECT_DIR$/src/components/FooterComponent.js" />
         <option value="$PROJECT_DIR$/src/components/ContectComponent.js" />
         <option value="$PROJECT_DIR$/src/shared/dishes.js" />
@@ -208,6 +207,7 @@
         <option value="$PROJECT_DIR$/src/components/MainComponent.js" />
         <option value="$PROJECT_DIR$/src/components/AboutComponent.js" />
         <option value="$PROJECT_DIR$/src/components/ContactComponent.js" />
+        <option value="$PROJECT_DIR$/src/components/HeaderComponent.js" />
       </list>
     </option>
   </component>
@@ -228,8 +228,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="132" />
-    <option name="y" value="100" />
+    <option name="x" value="-239" />
+    <option name="y" value="74" />
     <option name="width" value="959" />
     <option name="height" value="800" />
   </component>
@@ -324,18 +324,18 @@
       <workItem from="1542214002023" duration="9315000" />
       <workItem from="1542369287349" duration="1725000" />
       <workItem from="1542868569369" duration="753000" />
-      <workItem from="1542869390278" duration="4441000" />
+      <workItem from="1542869390278" duration="5561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38666000" />
+    <option name="totallyTimeSpent" value="39786000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="132" y="100" width="959" height="800" extended-state="0" />
+    <frame x="-239" y="74" width="959" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18763326" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18763326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -349,7 +349,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.27542374" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.27542374" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -437,16 +437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HeaderComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/FooterComponent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -531,6 +521,16 @@
           <caret line="177" column="48" selection-start-line="177" selection-start-column="48" selection-end-line="177" selection-end-column="48" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HeaderComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="107" column="75" lean-forward="true" selection-start-line="107" selection-start-column="75" selection-end-line="107" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
