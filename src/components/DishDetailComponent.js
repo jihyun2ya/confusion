@@ -1,6 +1,9 @@
-import React from 'react';
-import {Card, CardBody, CardImg, CardText, CardTitle, Breadcrumb, BreadcrumbItem} from "reactstrap";
+import React, {Component} from 'react';
+import {Card, CardBody, CardImg, CardText, CardTitle, Breadcrumb, BreadcrumbItem, Col, Button, Row} from "reactstrap";
 import {Link} from 'react-router-dom';
+import CommentForm from "./CommentFormComponent";
+
+
 function RenderDish({dish}) {
     return (
         <div className="col-12 col-md-5 m-1">
@@ -30,6 +33,7 @@ function RenderComments({comments}) {
                         );
                     })}
                 </ul>
+                <CommentForm />
             </div>
         );
     const commentsView = comments.map((item) => {
