@@ -4,6 +4,9 @@ import {
 } from 'reactstrap';
 import {Control, LocalForm, Errors} from 'react-redux-form';
 
+const maxLength = (len) => (val) => !(val) || (val.length <= len)
+const minLength = (len) => (val) => (val) && (val.length >= len)
+
 class CommentForm extends Component {
     constructor(props) {
         super(props);
@@ -53,7 +56,20 @@ class CommentForm extends Component {
                             </Row>
                             <Row className="col-12 col-md-9 form-group">
                                 <Control.text model=".author" id="author"
+                                              validators={{
+                                                  maxLength: maxLength(15),
+                                                  minLength: minLength(3)
+                                              }}
                                               className="form-control" name="author"/>
+                                <Errors
+                                    className="text-danger"
+                                    model=".author"
+                                    show="touched"
+                                    messages={{
+                                        minLength: 'Must be greater than 2 characters',
+                                        maxLength: 'Must be 15 characters or less'
+                                    }}
+                                />
                             </Row>
                             <Row className="col-12 col-md-9">
                                 <Label htmlFor="comment">Comment</Label>
