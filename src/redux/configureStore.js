@@ -7,7 +7,7 @@ import { Leaders } from './leaders';
 export const ConfigureStore = () => {
     const store = createStore(
        combineReducers({
-           disheds: Dishes,
+           dishes: Dishes,
            comments: Comments,
            promotions: Promotions,
            leaders: Leaders,
