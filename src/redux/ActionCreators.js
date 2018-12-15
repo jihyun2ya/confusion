@@ -1,5 +1,5 @@
 import * as ActionTypes from './ActionTypes';
-import { baseUrl } from '../shared/baseUrl';
+import {baseUrl} from '../shared/baseUrl';
 
 export const addComment = (dishId, rating, author, comment) => ({
     type: ActionTypes.ADD_COMMENT,
@@ -11,16 +11,30 @@ export const addComment = (dishId, rating, author, comment) => ({
     }
 })
 
-export const fetchDishes = () => (dispatch) =>{
+export const fetchDishes = () => (dispatch) => {
     dispatch(dishesLoading(true));
 
     return fetch(baseUrl + 'dishes')
+        .then(response => {
+                if (response.ok) {
+                    return response;
+                } else {
+                    var error = new Error('Error ' + response.status + ': ' + response.statusText);
+                    error.response = response;
+                    throw error;
+                }
+            },
+            error => {
+                var errmess = new Error(error.message);
+                throw errmess;
+            })
         .then(response => response.json())
-        .then(dishes => dispatch(addDishes(dishes)));
+        .then(dishes => dispatch(addDishes(dishes)))
+        .catch(error => dispatch(dishesFaild(error.message)));
 }
 
-export const dishesLoading=() => ({
-   type: ActionTypes.DISHES_LOADING
+export const dishesLoading = () => ({
+    type: ActionTypes.DISHES_LOADING
 });
 
 export const dishesFaild = (errmess) => ({
@@ -34,10 +48,25 @@ export const addDishes = (dishes) => ({
 })
 
 
-export const fetchComments = () => (dispatch) =>{
+export const fetchComments = () => (dispatch) => {
     return fetch(baseUrl + 'comments')
+        .then(response => {
+                if (response.ok) {
+                    return response;
+                } else {
+
+                    var error = new Error('Error ' + response.status + ': ' + response.statusText);
+                    error.response = response;
+                    throw error;
+                }
+            },
+            error => {
+                var errmess = new Error(error.message);
+                throw errmess;
+            })
         .then(response => response.json())
-        .then(comments => dispatch(addComments(comments)));
+        .then(comments => dispatch(addComments(comments)))
+        .catch(error => dispatch(commentsFaild(error.message)));
 }
 
 export const commentsFaild = (errmess) => ({
@@ -52,18 +81,29 @@ export const addComments = (comments) => ({
 })
 
 
-export const fetchPromos = () => (dispatch) =>{
+export const fetchPromos = () => (dispatch) => {
     dispatch(promosLoading(true));
 
     return fetch(baseUrl + 'promotions')
+        .then(response => {
+                if (response.ok) {
+                    return response;
+                } else {
+                    var error = new Error('Error ' + response.status + ': ' + response.statusText);
+                    error.response = response;
+                    throw error;
+                }
+            },
+            error => {
+                var errmess = new Error(error.message);
+                throw errmess;
+            })
         .then(response => response.json())
-        .then(promos => dispatch(addPromos(promos)));
-    // setTimeout(()=>{
-    //     dispatch(addDishes(DISHES));
-    // },2000);
+        .then(promos => dispatch(addPromos(promos)))
+        .catch(error => dispatch(promosFaild(error.message)));
 }
 
-export const promosLoading=() => ({
+export const promosLoading = () => ({
     type: ActionTypes.PROMOS_LOADING
 });
 
