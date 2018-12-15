@@ -12,7 +12,7 @@ import {Switch, Route, Redirect, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import { postComment, fetchDishes, fetchComments, fetchPromos} from '../redux/ActionCreators';
 import {actions} from 'react-redux-form';
-
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const mapStateToProps = state => { // state :from redux store
     // redux의 state를 가져와서 props로 쓸수있게 된다.
@@ -80,6 +80,8 @@ class Main extends Component {
         return (
             <div className="App">
                 <Header/>
+                <TransitionGroup>
+                    <CSSTransition key={this.props.location.key} classNames="pages" timeout={300}>
                 <Switch>
                     <Route path="/home" component={HomePage}/>
                     <Route exact path="/menu" component={() => <Menu dishes={this.props.dishes}/>}/>
@@ -92,6 +94,8 @@ class Main extends Component {
                     {/*onClick={(dishId) => this.onDishSelect(dishId)}/>*/}
                     {/*<DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]}/>*/}
                 </Switch>
+                    </CSSTransition>
+                </TransitionGroup>
                 <Footer/>
             </div>
         );
