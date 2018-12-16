@@ -10,9 +10,15 @@ import {
 import {Link} from 'react-router-dom';
 import {baseUrl} from '../shared/baseUrl';
 import {Loading} from "./LoadingComponent";
+import { FadeTransform, } from 'react-animation-components';
 
 function RenderLeader({detail}) {
     return (
+        <FadeTransform in
+                       transformProps={{
+                           exitTransform: 'scale(0.5) translateY(-50%)'
+                       }}>
+
         <div className="row">
             <div className="col-md-4">
                 <img src={baseUrl + detail.image} alt={detail.name}/>
@@ -23,6 +29,7 @@ function RenderLeader({detail}) {
                 <p>{detail.description}</p>
             </div>
         </div>
+        </FadeTransform>
     );
 }
 
